@@ -120,11 +120,11 @@ export const hero = {
   search: {
     locationPlaceholder: "Pick up location...",
     pickupDateLabel: "Pick up date",
-    pickupDate: "2025-06-15",
+    pickupDate: "2026-06-15",
     timeLabel: "Time",
     pickupTime: "10:00",
     dropoffDateLabel: "Drop off date",
-    dropoffDate: "2025-06-25",
+    dropoffDate: "2026-06-25",
     dropoffTime: "10:00",
     submit: "Search",
   },
