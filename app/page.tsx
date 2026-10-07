@@ -1,5 +1,7 @@
+import { CarFind } from "@/components/sections/CarFind";
 import { Hero } from "@/components/sections/Hero";
 import { Navbar } from "@/components/sections/Navbar";
+import { Statistics } from "@/components/sections/Statistics";
 import { TopBar } from "@/components/sections/TopBar";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Statistics />
+        <CarFind />
       </main>
     </>
   );

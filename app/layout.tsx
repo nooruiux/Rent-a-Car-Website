@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
+import { MotionProvider } from "@/components/ui/MotionProvider";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -51,7 +52,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" dir="ltr" className={`${jakarta.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }
