@@ -100,9 +100,11 @@ export function Navbar() {
           <a href="#" className="hidden min-h-11 items-center rounded-xs text-body-lg leading-none text-ink transition-colors hover:text-primary sm:inline-flex">
             Login
           </a>
-          <Button href="#search" size="md" withArrow className="hidden sm:inline-flex">
-            Get Started
-          </Button>
+          <div className="hidden sm:block">
+            <Button href="#search" size="md" withArrow>
+              Get Started
+            </Button>
+          </div>
           <button
             ref={toggleRef}
             type="button"

@@ -13,7 +13,7 @@ export function OfferBanner() {
             alt={offer.alt}
             fill
             sizes="(min-width: 1312px) 1280px, 100vw"
-            className="-z-10 object-cover object-[70%_center]"
+            className="-z-10 object-cover object-[78%_center] md:object-center"
           />
           <div
             aria-hidden="true"

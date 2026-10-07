@@ -48,7 +48,7 @@ export function Testimonials() {
           </p>
         </Reveal>
 
-        <div className="relative w-full" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
+        <div className="relative w-full pb-14 lg:pb-0" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
           {/* Desktop: three cards, middle one elevated */}
           <div className="hidden min-h-[475px] grid-cols-3 items-center gap-6 px-[5px] lg:grid">
             {visible.map((index, position) => (
@@ -87,13 +87,13 @@ export function Testimonials() {
             direction="prev"
             label="Previous testimonial"
             onClick={() => go(-1)}
-            className="absolute top-1/2 -left-2 z-10 -translate-y-1/2 sm:left-4 lg:top-[220px] lg:-left-[19px] xl:-left-[16px]"
+            className="absolute bottom-0 left-[calc(50%-52px)] z-10 lg:bottom-auto lg:top-[220px] lg:-left-[19px] lg:-translate-y-1/2 xl:-left-[16px]"
           />
           <ArrowButton
             direction="next"
             label="Next testimonial"
             onClick={() => go(1)}
-            className="absolute top-1/2 -right-2 z-10 -translate-y-1/2 sm:right-4 lg:top-[220px] lg:-right-[19px] xl:-right-[16px]"
+            className="absolute bottom-0 left-[calc(50%+8px)] z-10 lg:bottom-auto lg:left-auto lg:top-[220px] lg:-right-[19px] lg:-translate-y-1/2 xl:-right-[16px]"
           />
         </div>
       </div>

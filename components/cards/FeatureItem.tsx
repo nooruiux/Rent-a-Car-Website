@@ -18,7 +18,7 @@ export function FeatureItem({ feature }: { feature: Feature }) {
       </span>
       <div className="flex flex-col gap-2">
         <h3 className="text-h5 font-semibold text-ink">{feature.title}</h3>
-        <p className="max-w-[223px] text-body-lg leading-normal font-medium text-body-72 xl:w-[223px] xl:max-w-none">{feature.description}</p>
+        <p className="max-w-[223px] text-body-lg leading-normal font-medium text-body-72 min-[82rem]:w-[223px] min-[82rem]:max-w-none">{feature.description}</p>
       </div>
     </div>
   );

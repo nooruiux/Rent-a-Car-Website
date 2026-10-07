@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <footer id="contact" className="mt-section bg-secondary text-white lg:mt-20">
       <div className="container-site">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-12 pb-10 md:grid-cols-3 lg:grid-cols-[235px_274px_274px_274px_221px] lg:gap-0 lg:pb-[63px]">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pt-12 pb-10 md:grid-cols-3 lg:grid-cols-5 lg:pb-[63px] min-[82rem]:grid-cols-[235px_274px_274px_274px_221px] min-[82rem]:gap-0">
           {footer.columns.map((column, i) => (
             <nav key={`${column.title}-${i}`} aria-label={i === 0 ? column.title : `${column.title} ${i}`} className="flex flex-col gap-6">
               <h2 className="text-body-lg leading-none font-semibold text-white">{column.title}</h2>

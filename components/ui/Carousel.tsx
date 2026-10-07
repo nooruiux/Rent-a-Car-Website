@@ -102,7 +102,7 @@ export function Carousel({ label, children, className, trackClassName, itemClass
         tabIndex={0}
         onKeyDown={onKeyDown}
         className={cn(
-          "scrollbar-none -mx-6 -my-8 flex snap-x scroll-px-6 px-6 snap-mandatory gap-6 overflow-x-auto overscroll-x-contain scroll-smooth py-8 focus-visible:outline-offset-[-3px]",
+          "scrollbar-none -mx-4 -my-8 flex snap-x scroll-px-4 px-4 sm:-mx-6 sm:scroll-px-6 sm:px-6 snap-mandatory gap-6 overflow-x-auto overscroll-x-contain scroll-smooth py-8 focus-visible:outline-offset-[-3px]",
           trackClassName,
         )}
       >
