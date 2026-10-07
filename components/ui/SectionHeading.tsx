@@ -29,7 +29,7 @@ export function SectionHeading({
     <div className={cn("flex flex-col gap-4 md:gap-6", centered ? "items-center text-center" : "items-start text-left", className)}>
       <div className={cn("flex flex-col gap-2", centered ? "items-center" : "items-start")}>
         {eyebrow ? <p className="text-body-xl leading-normal font-semibold text-secondary">{eyebrow}</p> : null}
-        <Tag id={id} className={cn("text-h3 font-semibold text-ink text-balance", titleClassName)}>
+        <Tag id={id} className={cn("text-h3 font-semibold text-ink", titleClassName)}>
           {title}
         </Tag>
       </div>
