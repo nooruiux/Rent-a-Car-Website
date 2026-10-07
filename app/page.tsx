@@ -1,6 +1,9 @@
+import { BookCars } from "@/components/sections/BookCars";
 import { CarFind } from "@/components/sections/CarFind";
 import { Hero } from "@/components/sections/Hero";
+import { Experience } from "@/components/sections/Experience";
 import { Navbar } from "@/components/sections/Navbar";
+import { OfferBanner } from "@/components/sections/OfferBanner";
 import { Statistics } from "@/components/sections/Statistics";
 import { TopBar } from "@/components/sections/TopBar";
 
@@ -16,6 +19,10 @@ export default function Home() {
         <Hero />
         <Statistics />
         <CarFind />
+        <BookCars id="cars" variant="centered" />
+        <OfferBanner />
+        <Experience />
+        <BookCars id="more-cars" variant="left" />
       </main>
     </>
   );
