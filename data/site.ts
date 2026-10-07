@@ -60,7 +60,7 @@ export type Faq = { id: string; question: string; answer: string };
 export const site = {
   name: "Rent",
   legalName: "Car Renty Group",
-  url: "https://rent-a-car-website.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://rent-a-car-website-eight.vercel.app"),
   description:
     "Rent a car in Dubai within a minute. Compare 450+ rental companies, luxury, sports, SUV and monthly car rentals with free cancellation and quality drivers.",
   phone: "+971 50 461 7277",
