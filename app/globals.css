@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — sourced from the Figma file "Rent a Car Website" (variables + styles).
+ * Components must only reference these tokens (via Tailwind utilities or var()).
+ */
+@theme {
+  --color-gradient-start: #e53935;
+  --gradient-brand: linear-gradient(110deg, #e53935 5%, #ea9a28 40%);
+
+  /* Colors */
+  --color-primary: #1aa9e5;
+  --color-primary-hover: #1597cf;
+  --color-secondary: #005085;
+  --color-accent: #ea9a28;
+  --color-ink: #202020;
+  --color-ink-soft: #2d2d2d;
+  --color-white: #fefefe;
+  --color-pure-white: #ffffff;
+  --color-navy: #0a2141;
+  --color-surface: #f5f6fb;
+  --color-sky-50: #e0f2fe;
+  --color-star: #ffa41c;
+  --color-tag: #ea9a28;
+  --color-ink-72: rgb(32 32 32 / 0.72);
+  --color-ink-80: rgb(32 32 32 / 0.8);
+  --color-body-72: rgb(45 45 45 / 0.72);
+  --color-black-56: rgb(0 0 0 / 0.56);
+  --color-black-64: rgb(0 0 0 / 0.64);
+  --color-black-72: rgb(0 0 0 / 0.72);
+  --color-black-80: rgb(0 0 0 / 0.8);
+  --color-line: rgb(0 0 0 / 0.08);
+  --color-line-soft: rgb(0 0 0 / 0.04);
+  --color-on-dark-72: rgb(255 255 255 / 0.72);
+  --color-on-dark-80: rgb(255 255 255 / 0.8);
+  --color-on-dark-12: rgb(255 255 255 / 0.12);
+  --color-tint-warm: rgb(234 154 40 / 0.04);
+  --color-tint-cool: rgb(26 169 229 / 0.04);
+  --color-navy-4: rgb(10 33 65 / 0.04);
+  --color-navy-6: rgb(10 33 65 / 0.06);
+
+  /* Typography — Figma text styles (letter-spacing 0.5% = 0.005em) */
+  --text-h1: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem); /* 56 */
+  --text-h1--line-height: 1.2143; /* 68/56 */
+  --text-h1--letter-spacing: 0.005em;
+  --text-h1--font-weight: 700;
+  --text-h2: clamp(2rem, 1.55rem + 1.8vw, 3rem); /* 48 */
+  --text-h2--line-height: 1.1667; /* 56/48 */
+  --text-h2--letter-spacing: 0.005em;
+  --text-h3: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem); /* 40 */
+  --text-h3--line-height: 1.2; /* 48/40 */
+  --text-h3--letter-spacing: 0.005em;
+  --text-h4: clamp(1.5rem, 1.3rem + 0.8vw, 2rem); /* 32 */
+  --text-h4--line-height: 1.25; /* 40/32 */
+  --text-h4--letter-spacing: 0.005em;
+  --text-title: clamp(1.125rem, 0.9rem + 0.9vw, 1.75rem); /* 28 (FAQ question) */
+  --text-title--line-height: 1.2857; /* 36/28 */
+  --text-title--letter-spacing: 0.005em;
+  --text-h5: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); /* 24 */
+  --text-h5--line-height: 1.3333; /* 32/24 */
+  --text-h5--letter-spacing: 0.005em;
+  --text-h6: 1.25rem; /* 20 */
+  --text-h6--line-height: 1.4; /* 28/20 */
+  --text-h6--letter-spacing: 0.005em;
+  --text-body-xl: 1.125rem; /* 18 */
+  --text-body-xl--line-height: 1.6667; /* 30/18 */
+  --text-body-xl--letter-spacing: 0.005em;
+  --text-body-lg: 1rem; /* 16 */
+  --text-body-lg--line-height: 1.875; /* 30/16 */
+  --text-body-lg--letter-spacing: 0.005em;
+  --text-body-md: 0.875rem; /* 14 */
+  --text-body-md--line-height: 1.5;
+  --text-body-md--letter-spacing: 0.005em;
+
+  /* Radius */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-card: 12px 12px 25px rgba(0, 0, 0, 0.08);
+  --shadow-band: 12px 12px 50px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 12px 12px 50px rgba(0, 0, 0, 0.08);
+  --shadow-search: 12px 12px 28px rgba(0, 0, 0, 0.08);
+  --shadow-control: 0 0 8px rgba(0, 0, 0, 0.16);
+  --shadow-header: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+  /* Spacing helpers */
+  --spacing-section: clamp(4rem, 2.6rem + 5.6vw, 7rem); /* 64px → 112px */
+  --container-site: 1280px;
+
+  /* Breakpoints (adds 1440 for the design frame) */
+  --breakpoint-xs: 25rem;
+  --breakpoint-3xl: 90rem;
+}
+
+@theme inline {
+  /* Fonts (wired through next/font in app/layout.tsx) */
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: var(--font-poppins-family), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-pure-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-site {
+  width: 100%;
+  max-width: calc(var(--container-site) + 2rem);
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media (min-width: 40rem) {
+    max-width: calc(var(--container-site) + 3rem);
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 82rem) {
+    max-width: var(--container-site);
+    padding-inline: 0;
+  }
+}
+
+@utility text-gradient-brand {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
