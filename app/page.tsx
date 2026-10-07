@@ -10,10 +10,12 @@ import { OfferBanner } from "@/components/sections/OfferBanner";
 import { Statistics } from "@/components/sections/Statistics";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TopBar } from "@/components/sections/TopBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:rounded-xs focus:bg-pure-white focus:px-4 focus:py-2">
         Skip to content
       </a>

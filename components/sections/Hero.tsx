@@ -36,8 +36,10 @@ export function Hero() {
             alt="Orange Lamborghini Huracán Performante, front three-quarter view"
             width={1438}
             height={928}
-            priority
-            sizes="(min-width: 1024px) 719px, 100vw"
+            preload
+            fetchPriority="high"
+            loading="eager"
+            sizes="(min-width: 1440px) 719px, (min-width: 1024px) 50vw, 94vw"
             className="h-auto w-full"
           />
         </div>
