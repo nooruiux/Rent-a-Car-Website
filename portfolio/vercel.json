@@ -1,9 +1,0 @@
-{
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/assets/:file", "destination": "https://raw.githubusercontent.com/nooruiux/Rent-a-Car-Website/4a9c44626b042ceef9cd741c4e3179eb840c778a/portfolio/assets/:file" }
-  ],
-  "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
-  ]
-}
